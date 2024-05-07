@@ -7,9 +7,26 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class TestController {
 
-    @ResponseBody
     @GetMapping("/test")
     public String test(){
-        return "테스트 완료";
+        return "index";
+    }
+
+    @GetMapping("/user")
+    @ResponseBody
+    public String user(){
+        return "user";
+    }
+
+    @GetMapping("/manager")
+    @ResponseBody
+    public String manager(){
+        return "manager";
+    }
+
+    @GetMapping("/admin")
+    @ResponseBody
+    public String admin(){
+        return "admin";
     }
 }
