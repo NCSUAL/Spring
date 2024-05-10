@@ -3,7 +3,7 @@ package project.security_study.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-import project.security_study.Repository.StudyRepository;
+import project.security_study.repository.StudyRepository;
 import project.security_study.model.StudyData;
 
 @Service
