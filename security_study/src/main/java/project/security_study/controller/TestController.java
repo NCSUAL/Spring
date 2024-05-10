@@ -50,7 +50,7 @@ public class TestController {
 
     @PostMapping("/joinProc")
     public String joinForm(StudyData studyData){
-        studyService.login(studyData);
+        studyService.sign(studyData);
         return "redirect:/login";
     }
 

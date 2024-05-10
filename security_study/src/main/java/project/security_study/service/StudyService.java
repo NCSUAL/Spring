@@ -20,12 +20,15 @@ public class StudyService {
     }
 
     //나중에~
-    public void login(StudyData studyData){
+    public void sign(StudyData studyData){
         String get_password = studyData.getPassword();
         String encode_password = bCryptPasswordEncoder.encode(get_password);
 
         studyData.setPassword(encode_password);
         studyRepository.save(studyData);
     }
+
+
+    //로그인
 
 }

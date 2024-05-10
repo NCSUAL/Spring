@@ -29,7 +29,11 @@ public class SecurityConfig {
                 );
 
         //로그인 페이지 설정
-        http.formLogin((auth)-> auth.loginPage("/login")); //이거 get요청임 ㅋㅋ
+        http.formLogin((auth)-> auth
+                .loginPage("/login")        //이거 get요청임 ㅋㅋ
+                .loginProcessingUrl("/loginForm")  // loginForm으로 요청이 들어오면 시큐리티에서 처리
+                .defaultSuccessUrl("/")  //loginForm으로 요청이 마무리되면 http://localhost:8080 / 로 돌아감
+        );
 
         return http.build();
     }
