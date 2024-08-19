@@ -3,11 +3,13 @@ package project.security_study.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import project.security_study.model.StudyData;
 import project.security_study.service.StudyService;
 
 @Controller
+@RequestMapping("/api")
 public class TestController {
 
     private final StudyService studyService;
