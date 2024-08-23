@@ -9,6 +9,13 @@ public class Member{
     private Long id;
     private String name;
 
+    //리플렉션 사용해야됨
+    public Member(){}
+
+    public Member(Long id, String name){
+        this.id=  id;
+        this.name = name;
+    }
     public Long getId() {
         return id;
     }

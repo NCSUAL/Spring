@@ -31,10 +31,23 @@ public class JpaMain {
 //            for(Member member : resultList) {
 //                System.out.println(member.getName());
 //            }
-            
 
-            //작업 알림
+//            Member member = new Member(150L,"A");
+//            em.persist(member);
+//            Member member = em.find(Member.class, 150L);
+//            System.out.println(member);
+
+//            Member member = em.find(Member.class, 150L);
+//            em.remove(member);
+//            //작업 알림
+//            tx.commit();
+
+             Member member = new Member(150L,"A");
+             em.persist(member);
+             em.flush();
+            System.out.println("=============");
             tx.commit();
+
         }
         catch (Exception e){
             //작업 되돌리기
