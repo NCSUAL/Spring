@@ -10,6 +10,9 @@ import project.security_study.repository.StudyRepository;
 
 import java.util.Optional;
 
+
+// 시큐리티 설정에서 loginProcessUrl("login");
+// /login 요청이 오면 자동으로 StudyDetailsService 타입으로 IOC 되어 있는 loadUserByUsername가 실행
 @Service
 public class StudyDetailsService implements UserDetailsService {
 
