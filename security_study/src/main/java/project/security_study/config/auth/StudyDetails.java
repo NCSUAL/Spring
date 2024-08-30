@@ -1,16 +1,20 @@
 package project.security_study.config.auth;
 
 
+import lombok.Getter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.oauth2.core.user.OAuth2User;
 import project.security_study.model.StudyData;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.Map;
 
-public class StudyDetails implements UserDetails {
+@Getter
+public class StudyDetails implements UserDetails, OAuth2User {
 
     //데이터를 주입 받아야함
     private StudyData studyData;
@@ -19,6 +23,11 @@ public class StudyDetails implements UserDetails {
         this.studyData = studyData;
     }
 
+
+    @Override
+    public Map<String, Object> getAttributes() {
+        return Map.of();
+    }
 
     //사용자 role을 가져옴
     @Override
@@ -65,5 +74,10 @@ public class StudyDetails implements UserDetails {
     @Override
     public boolean isEnabled() {
         return true;
+    }
+
+    @Override
+    public String getName() {
+        return "";
     }
 }
