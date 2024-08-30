@@ -51,7 +51,7 @@ public class SecurityConfig {
         );
 
         http.oauth2Login(oauth2 -> oauth2
-                .loginPage("/login") //oauth2 로그인 진행하기 전 주소
+                .loginPage("/login") //oauth2 로그인 진행하기 전 주소임
                 .userInfoEndpoint(userInfoEndpoint -> userInfoEndpoint //유저 정보를 받아옴
                         .userService(testOuath2Service)   //service 단에서 처리
                 )
